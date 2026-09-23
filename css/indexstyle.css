@@ -1,0 +1,372 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #222;
+  background-color: #fafafa;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: darkslateblue;
+  padding: 15px 30px;
+  position: relative;
+  z-index: 1000;   /* keeps navbar above the hero image */
+}
+
+.logo {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin-left: 25px;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.nav-links li a:hover {
+  text-decoration: underline;
+}
+
+/* Hamburger button - hidden by default */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+/* Below 700px, switch to dropdown menu */
+@media (max-width: 700px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #6b4F3A;
+    padding: 10px 0;
+    z-index: 1000;   /* keeps dropdown above the hero image too */
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 0;
+    text-align: center;
+    padding: 12px 0;
+  }
+}
+
+/* Example hero section — replace with your actual title image */
+.hero {
+  background-image: url('IMAGES/360_F_632658450_3NZBgRjWgk7WdGOqAIkKBFjtWyd9X8KF.webp');
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  position: relative;
+  z-index: 1;   /* stays below the navbar */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+/* Create a container that locks to the full screen viewport height */
+.hero-container {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* 100% of the viewport height */
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Force the image to cover the screen without stretching out of proportion */
+.full-screen-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Crops and fits the image perfectly */
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width:100%;
+  height: auto;
+  display: block; 
+  
+}
+
+/* Center the title perfectly over the top of the image */
+.hero-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white; /* Change text color so it stands out */
+  font-family: sans-serif;
+  font-size: 3rem;
+  margin: 0;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Adds contrast against bright images */
+  z-index: 1;
+}
+
+
+.header {
+  text-align: center;
+font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.heading {
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  color: black;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+
+.Admission{
+  text-align: center;
+  font-family:'Times New Roman', Times, serif
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.first-paragraph{
+    text-align: center;
+    font-size: 1.25rem; /* Scales text beautifully based on user browser settings */
+    line-height: 1.6;   /* Optional: Increases spacing between lines for easier reading */
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.heading{
+    text-align: center;
+    color: black;
+}
+
+.apply-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+}
+
+.btn-apply {
+  padding: 14px 32px;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: white;
+  background-color: #2b211b;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  text-transform: uppercase;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.btn-apply:hover {
+  background-color: #c9b79c;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-apply:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.faq-item {
+  border: 1px solid #e2e2e2;
+  border-radius: 8px;
+  padding: 0.9rem 1rem;
+  margin-bottom: 0.6rem;
+}
+
+.faq-item summary {
+  font-weight: 600;
+  cursor: pointer;
+  list-style: none;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary::before {
+  content: "+ ";
+  color: #8b7cf6;
+  font-weight: 700;
+}
+
+.faq-item[open] summary::before {
+  content: "\2212 ";
+}
+
+.faq-item p {
+  margin-top: 0.6rem;
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+.Frequentlyasked{
+
+  text-align: center;
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+} 
+
+
+.side-by-side {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  padding: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.side-image {
+  width: 45%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.side-text {
+  width: 55%;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.side-text h2 {
+  color: #1e3a5f;
+  margin-bottom: 12px;
+  font-size: 1.6rem;
+}
+
+.side-text p {
+  color: #374151;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+/* Stack on mobile */
+@media (max-width: 600px) {
+  .side-by-side {
+    flex-direction: column;
+  }
+
+  .side-image,
+  .side-text {
+    width: 100%;
+  }
+}
+
+.text-bar {
+  background-color: black;
+  color: white;
+  padding: 18px;
+  margin: 24px auto;
+  max-width: 900px;
+  border-radius: 8px;
+  text-align: center;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.text-bar p {
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  line-height: 1.5;
+  color: white;
+}
+
+
+.site-footer-2 {
+  text-align: center;
+  padding: 10px;
+  background-color: darkslateblue; 
+  color: #aab0b8;
+}
+
+.footer-logo {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.8rem;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  margin-bottom: 0.8rem;
+}
+
+.footer-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.85rem;
+}
+
+.footer-links a:hover {
+  color: #8b7cf6;
+}
+
+.site-footer-2 p {
+  font-size: 0.8rem;
+}
+
+.freshfish-text{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  color: white;
+  font-size: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+

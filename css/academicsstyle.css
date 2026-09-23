@@ -1,0 +1,223 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #222;
+  background-color: #fafafa;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: darkslateblue;
+  padding: 15px 30px;
+  position: relative;
+  z-index: 1000;   /* keeps navbar above the hero image */
+}
+
+.logo {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin-left: 25px;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.nav-links li a:hover {
+  text-decoration: underline;
+}
+
+/* Hamburger button - hidden by default */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+/* Below 700px, switch to dropdown menu */
+@media (max-width: 700px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #003366;
+    padding: 10px 0;
+    z-index: 1000;   /* keeps dropdown above the hero image too */
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 0;
+    text-align: center;
+    padding: 12px 0;
+  }
+}
+
+.programs {
+  padding: 60px 32px;
+  max-width: 1100px;
+  margin: 0 auto;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  text-align: center;
+}
+
+.programs-header h2 {
+  color: #1e3a5f;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.programs-header p {
+  color: #6b7280;
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+}
+
+.programs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.program-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 32px 24px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-align: left;
+}
+
+.program-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.program-card h3 {
+  color: #1e3a5f;
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+  border-left: 4px solid #ffc107;
+  padding-left: 12px;
+}
+
+.program-card p {
+  color: #374151;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.programs-cta {
+  margin-top: 40px;
+}
+
+.programs-cta a {
+  color: #1e3a5f;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  border-bottom: 2px solid #ffc107;
+  padding-bottom: 4px;
+  transition: color 0.2s ease;
+}
+
+.programs-cta a:hover {
+  color: #e6ac00;
+}
+
+/* Stack cards on mobile */
+@media (max-width: 768px) {
+  .programs-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+.site-footer-2 {
+  text-align: center;
+  padding: 5px;
+  background-color: darkslateblue;
+  color: #aab0b8;
+}
+
+  
+
+.footer-logo {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.8rem;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  margin-bottom: 0.8rem;
+}
+
+.footer-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.85rem;
+}
+
+.footer-links a:hover {
+  color: #8b7cf6;
+}
+
+.site-footer-2 p {
+  font-size: 0.8rem;
+}
+
+.freshfish-text{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  color: white;
+  font-size: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

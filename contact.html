@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="css/contactstyle.css">
+</head>
+<body>
+    
+    <nav class="navbar">
+  <div class="logo">Bright Future Academy</div>
+
+  <button class="menu-toggle" onclick="document.querySelector('.nav-links').classList.toggle('show')">
+    ☰
+  </button>
+
+  <ul class="nav-links">
+    <li><a href="Home.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="academics.html">Academics</a></li>
+    <li><a href="Admission.html">Admissions</a></li>
+    <li><a href="Contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+
+<section class="hero wrap">
+  <h1>Let's find a time to talk.</h1>
+  <p>Questions about admissions, a tour of the campus, or just want to say hello? Reach us any of the ways below, or send a note and a member of our team will get back to you within one school day.</p>
+</section>
+ 
+<main class="wrap">
+  <div class="grid">
+ 
+    <div class="panel">
+      <h2>Reach us directly</h2>
+ 
+      <div class="info-row">
+        <span class="info-icon">📍</span>
+        <div>
+          <span class="label">Campus</span>
+          <span class="value">14 Aurora Lane, Abuja, FCT, Nigeria</span>
+        </div>
+      </div>
+ 
+      <div class="info-row">
+        <span class="info-icon">📞</span>
+        <div>
+          <span class="label">Phone</span>
+          <span class="value"><a href="tel:+2348001234567">+234 800 123 4567</a></span>
+        </div>
+      </div>
+ 
+      <div class="info-row">
+        <span class="info-icon">✉</span>
+        <div>
+          <span class="label">Email</span>
+          <span class="value"><a href="mailto:hello@brightfutureacademy.edu">hello@brightfutureacademy.edu</a></span>
+        </div>
+      </div>
+ 
+      <div class="info-row">
+        <span class="info-icon">🏫</span>
+        <div>
+          <span class="label">Admissions office</span>
+          <span class="value"><a href="mailto:admissions@brightfutureacademy.edu">admissions@brightfutureacademy.edu</a></span>
+        </div>
+      </div>
+ 
+      <div class="hours">
+        <table>
+          <tr><td>Monday – Friday</td><td>7:30am – 4:00pm</td></tr>
+          <tr><td>Saturday</td><td>9:00am – 12:00pm</td></tr>
+          <tr><td>Sunday</td><td>Closed</td></tr>
+        </table>
+      </div>
+ 
+      <div class="social">
+        <a href="#" aria-label="Facebook">f</a>
+        <a href="#" aria-label="Instagram">ig</a>
+        <a href="#" aria-label="X">x</a>
+      </div>
+    </div>
+ 
+    <div>
+      <div class="card">
+        <h2>Send a message</h2>
+        <p>Tell us a bit about what you need and we'll route it to the right person.</p>
+ 
+        <form id="contactForm">
+          <div class="field-row">
+            <div>
+              <label for="name">Full name</label>
+              <input id="name" type="text" placeholder="Jane Okafor" required>
+            </div>
+            <div>
+              <label for="email">Email address</label>
+              <input id="email" type="email" placeholder="jane@email.com" required>
+            </div>
+          </div>
+ 
+          <div class="field-row">
+            <div>
+              <label for="phone">Phone number</label>
+              <input id="phone" type="tel" placeholder="+234 ...">
+            </div>
+            <div>
+              <label for="reason">I'm getting in touch about</label>
+              <select id="reason">
+                <option>Admissions & enrollment</option>
+                <option>Scheduling a campus tour</option>
+                <option>Tuition & financial aid</option>
+                <option>Current student support</option>
+                <option>Something else</option>
+              </select>
+            </div>
+          </div>
+ 
+          <label for="message">Message</label>
+          <textarea id="message" placeholder="How can we help?" required></textarea>
+ 
+          <button type="submit">Send message</button>
+ 
+          <div class="confirm" id="confirmMsg">Thanks — your message has been received. We'll reply within one school day.</div>
+        </form>
+      </div>
+ 
+      <div class="map-strip">
+        <iframe src="https://maps.google.com/maps?q=Abuja%2C%20Nigeria&t=&z=13&ie=UTF8&iwloc=&output=embed" loading="lazy" title="Campus map"></iframe>
+      </div>
+    </div>
+ 
+  </div>
+</main>
+
+
+<footer class="site-footer-2">
+
+  <div class="footer-links">
+    <a href="#privacy">Privacy</a>
+    <a href="#terms">Terms</a>
+    <a href="#support">Support</a>
+  </div>
+
+  <p>&copy; 2026 BRIGHT FUTURE ACADEMY All rights reserved.</p>
+</footer>
+
+</body>
+</html>
